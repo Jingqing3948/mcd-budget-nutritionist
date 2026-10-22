@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>麦麦预算营养师</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="brand-mark">M</div>
+      <div>
+        <div class="eyebrow">MCD × MCP INNOVATION CHALLENGE</div>
+        <h1>麦麦预算营养师</h1>
+        <p>把“今天吃什么”变成一笔算得清、看得懂的决定。</p>
+      </div>
+      <div class="status" id="status">正在检查 MCP…</div>
+    </header>
+
+    <section class="panel form-panel">
+      <div class="section-title"><span class="step">01</span><div><h2>告诉我你的约束</h2><p>总预算按整桌计算，热量目标按每人计算。</p></div></div>
+      <form id="planner-form">
+        <label>总预算（元）<input name="budget" type="number" min="8" value="40" required /></label>
+        <label>用餐人数<input name="people" type="number" min="1" max="20" value="1" required /></label>
+        <label>每人目标热量（千卡）<input name="calories" type="number" min="0" value="700" required /></label>
+        <label>城市<input name="city" value="北京市" /></label>
+        <label class="wide">位置关键词<input name="keyword" value="望京" /></label>
+        <label>偏好<select name="mode"><option value="balanced">均衡优先</option><option value="budget">省钱优先</option><option value="energy">满足感优先</option></select></label>
+        <button type="submit" class="primary">生成我的三套方案 <span>→</span></button>
+      </form>
+    </section>
+
+    <section id="notice" class="notice hidden"></section>
+    <section id="result" class="results hidden">
+      <div class="result-head"><div><div class="eyebrow">02 / LIVE DECISION</div><h2>你的可解释点餐方案</h2></div><div id="source-badge" class="badge"></div></div>
+      <div id="store-line" class="store-line"></div>
+      <div id="plans" class="cards"></div>
+      <div class="telemetry panel" id="telemetry"></div>
+    </section>
+
+    <section class="panel how-it-works"><div class="section-title"><span class="step">03</span><div><h2>为什么不是普通推荐</h2><p>实时数据、营养约束和价格校验分阶段执行。</p></div></div><div class="flow"><span>输入约束</span><b>→</b><span>MCP 门店 / 菜单 / 营养 / 优惠</span><b>→</b><span>可解释方案</span><b>→</b><span>官方价格校验</span></div></section>
+    <footer>演示项目 · 不自动下单、不支付、不领取优惠 · 价格、供应和营养信息以麦当劳官方实时结果为准</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "mcd-budget-nutritionist",
+  "version": "0.1.0",
+  "private": true,
+  "description": "麦麦预算营养师：基于麦当劳 MCP 的预算、营养与优惠组合助手",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/recommendation.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
